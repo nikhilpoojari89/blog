@@ -1,0 +1,536 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    border-top: 1px solid #dde2e5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, serif!important;
+    font-style: italic;
+}
+
+p,
+li,
+.scrolltop {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+
+/***********************************************TOPBAR WITH LOGO CSS**************************************************/
+
+.topbar {
+    position: relative;
+    overflow: hidden;
+}
+
+.topbar a {
+    float: left;
+    color: #696969;
+    text-align: center;
+    padding: 30px 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topbar a:hover {
+    color: black;
+}
+
+.topbar-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topbar-centered a > img {
+    width: 70px;
+    height: 70px;
+}
+
+.topbar-right {
+    float: right;
+}
+
+.topbar-right .signup {
+    border: 1px solid grey;
+    position: relative;
+    float: left;
+    padding: 8px;
+    cursor: pointer;
+    margin: 26px 16px;
+    border-radius: 5px;
+}
+
+.box {
+    position: relative;
+    float: left;
+    padding: 26px 0px;
+    cursor: pointer;
+}
+
+.search {
+    width: 200px;
+    max-width: 0;
+    padding: 5px;
+    transition: all .5s ease;
+    position: absolute;
+    right: 25px;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+.search.expanded {
+    max-width: 200px;
+    opacity: 1;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+}
+
+.search-icon > i {
+    padding: 5px;
+    color: #696969;
+    font-size: 18px;
+}
+
+
+/***********************************************MENU BAR CSS**************************************************/
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #696969;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all .6s;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (min-width: 1241px) {
+    .topnav a {
+        padding: 14px 28px;
+        font-size: 18px;
+    }
+}
+
+
+/***********************************************BLOG CSS**************************************************/
+
+.row.thumb {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.header {
+    padding: 60px;
+    font-size: 40px;
+    text-align: center;
+    background-image: url(../images/Main-blog-image.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header .content {
+    text-align: left;
+    position: relative;
+    max-width: 500px;
+    color: #ffffff;
+}
+
+.header .content h3 {
+    font-family: serif;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.header .content p {
+    font-size: 18px;
+}
+
+.header .content a {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.leftcolumn .card:nth-of-type(2) {
+    margin-top: 20px;
+    padding-top: 0;
+}
+
+.leftcolumn h1,
+.leftcolumn h2,
+.leftcolumn h3 {
+    font-family: serif;
+}
+
+.thumb-leftcolumn .card,
+.thumb-rightcolumn .card {
+    overflow: hidden;
+    border: 1px solid #dde2e5;
+    padding: 0;
+    margin: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px -5px #676767;
+}
+
+.blogimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #dde2e5;
+    border-radius: 24px;
+}
+
+.card.section-heading {
+    padding-bottom: 0;
+    font-style: italic;
+    border: none;
+}
+
+.card.button {
+    border: none;
+}
+
+.card.about h1,
+.card.archives h1,
+.card.elsewhere h1 {
+    font-style: italic;
+    font-family: serif;
+}
+
+.leftcolumn .card.mainblog {
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.leftcolumn .card.mainblog:hover {
+    border-color: #007bff;
+    -webkit-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.leftcolumn .card h1 {
+    margin-bottom: 0;
+}
+
+.continue-read {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.leftcolumn .card h5 {
+    color: #999999;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.leftcolumn .card h5 > span {
+    color: #007bff;
+}
+
+.leftcolumn p,
+.leftcolumn li {
+    line-height: 1.5;
+}
+
+.card.about {
+    background-color: #f8f9fa;
+}
+
+.card.about p {
+    line-height: 1.5;
+}
+
+.card.archives p,
+.card.elsewhere p {
+    line-height: 1;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.card .older {
+    margin: 2px;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 20px;
+    color: #007bff;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.card .older:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    -webkit-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.card .newer {
+    margin: 2px;
+    text-decoration: none;
+    border: 2px solid #a0a6aa;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 20px;
+    color: #a0a6aa;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.card .newer:hover {
+    color: #ffffff;
+    background-color: #a0a6aa;
+    -webkit-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 12px 10px 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.thumb-leftcolumn .blogimg,
+.thumb-rightcolumn .blogimg {
+    height: 350px;
+    overflow: hidden;
+}
+
+.thumb-leftcolumn .blogimg {
+    background-image: url(../images/thumb-blog-image1.jpg);
+    background-position: 10% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thumb-rightcolumn .blogimg {
+    background-image: url(../images/thumb-blog-image2.jpg);
+    background-position: 10% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.thumb-leftcolumn .thumb-blog-info,
+.thumb-rightcolumn .thumb-blog-info {
+    padding: 20px;
+}
+
+.thumb-leftcolumn .thumb-blog-info > p:first-child {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.thumb-rightcolumn .thumb-blog-info > p:first-child {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.thumb-leftcolumn .thumb-blog-info h1,
+.thumb-rightcolumn .thumb-blog-info h1 {
+    font-family: serif;
+}
+
+.thumb-leftcolumn .thumb-blog-info > p:nth-of-type(3),
+.thumb-rightcolumn .thumb-blog-info > p:nth-of-type(3) {
+    line-height: 1.5;
+}
+
+.thumb-leftcolumn .thumb-blog-info a,
+.thumb-rightcolumn .thumb-blog-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/***********************************************FOOTER CSS**************************************************/
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    margin-top: 20px;
+}
+
+.footer p {
+    color: #999999;
+    font-weight: bold;
+    text-align: inherit;
+}
+
+.footer p a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer .scroll {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/**************************MEDIA QUERY FOR MOBILE DEVICE (400PX OR LESS)****************************/
+
+@media screen and (max-width: 400px) {
+    .topbar a,
+    .topbar-right {
+        display: block;
+    }
+    .topbar-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+    .topbar a {
+        padding: 10px 15px;
+    }
+    .topbar-right .signup {
+        margin: 0 16px;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+    .thumb-leftcolumn .blogimg {
+        background-position: 0% 50%;
+    }
+    .card.section-heading {
+        text-align: center;
+        padding: 5px 20px;
+    }
+    p {
+        text-align: justify;
+        font-size: 18px;
+    }
+    .leftcolumn li {
+        font-size: 18px;
+    }
+}
+
+
+/**************************MEDIA QUERY (401PX OR MORE)****************************/
+
+@media screen and (min-width: 401px) {
+    .leftcolumn .card {
+        padding-left: 20px;
+    }
+    .thumb-leftcolumn,
+    .thumb-rightcolumn {
+        float: left;
+        width: 50%;
+    }
+    .thumb-leftcolumn .card {
+        margin-left: 0;
+    }
+    .thumb-rightcolumn .card {
+        margin-right: 0;
+    }
+    .thumb-leftcolumn .blogimg,
+    .thumb-rightcolumn .blogimg {
+        width: 40%;
+        float: right;
+    }
+    .thumb-leftcolumn .thumb-blog-info,
+    .thumb-rightcolumn .thumb-blog-info {
+        width: 60%;
+    }
+    .thumb-leftcolumn .thumb-blog-info h1,
+    .thumb-rightcolumn .thumb-blog-info h1 {
+        margin: 0;
+    }
+    .thumb-leftcolumn .thumb-blog-info > p:nth-of-type(2),
+    .thumb-rightcolumn .thumb-blog-info > p:nth-of-type(2) {
+        margin: 0;
+        color: #6c757d;
+    }
+    .topnav a:hover {
+        color: #007bff;
+        text-shadow: 2px 2px 2px #909090;
+        -ms-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        transition: .6s;
+    }
+}
